@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Gurleen 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #fde2e4, #e0f4f1);
+    text-align: center;
+    color: #444;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff6f91;
+}
+
+h2 {
+    color: #ff8fab;
+}
+
+p {
+    font-size: 1.15em;
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+img {
+    width: 240px;
+    border-radius: 20px;
+    margin: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background: #ffd6e0;
+    padding: 25px;
+}
+
+/* 🎵 Play Button */
+#playBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 💖 Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+    <source src="meri-zindagi-hai-tu.mp3" type="audio/mpeg">
+</audio>
+
+<button id="playBtn" onclick="playMusic()">Tap to Play 💖</button>
+
+<section>
+    <h1>Happy Birthday Gurleen 🎂💖</h1>
+    <p>To the girl who turned my college life into the most beautiful journey ✨</p>
+</section>
+
+<section>
+    <h2>A Message From Me 💌</h2>
+    <p>
+        Dear Gurleen 🤍,<br><br>
+        I still remember the very first day of college when I met you.
+        That day felt so normal, yet it became the beginning of the most
+        beautiful friendship. From Semester 1 till now, we’ve shared
+        gossips, lunches, laughs, and countless memories.<br><br>
+
+        You are my comfort, my happiness, and my safe place.
+        Life feels brighter with you by my side. On your birthday,
+        I just want you to know that I want you with me for a lifetime.
+        Always and forever 🫶
+    </p>
+</section>
+
+<section>
+    <h2>Our Memories 📸</h2>
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo6.jpg">
+    <img src="photo7.jpg">
+    <img src="photo8.jpg">
+    <img src="photo9.jpg">
+    <img src="photo10.jpg">
+    <img src="photo11.jpg">
+    <img src="photo12.jpg">
+    <img src="photo13.jpg">
+    <img src="photo14.jpg">
+    <img src="photo15.jpg">
+    <img src="photo16.jpg">
+    <img src="photo17.jpg">
+</section>
+
+<section>
+    <h2>Forever Us 🫶</h2>
+    <p>
+        Meri zindagi ka sabse khoobsurat hissa ho tum 🤍
+    </p>
+</section>
+
+<div class="footer">
+    Made with endless love 💖 for Gurleen
+</div>
+
+<script>
+/* 🎵 Play music on tap */
+function playMusic() {
+    document.getElementById("bgMusic").play();
+    document.getElementById("playBtn").style.display = "none";
+}
+
+/* 💖 Create floating hearts */
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 7000);
+}, 500);
+</script>
+
+</body>
+</html>
